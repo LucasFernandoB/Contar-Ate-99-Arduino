@@ -1,0 +1,281 @@
+int  a = 13;
+int b = 9;
+int c = 7;
+int d = 11;
+int e = 2;
+int f = 5;
+int g = 6;
+int terraDez =8;
+int terraUni =12;
+unsigned long long int x=0;
+void zero()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,1);
+  digitalWrite(e,1);
+  digitalWrite(f,1);
+  digitalWrite(g,0);
+  
+}
+void um()
+{
+  digitalWrite(a,0);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,0);
+  digitalWrite(e,0);
+  digitalWrite(f,0);
+  digitalWrite(g,0);
+  
+}
+void dois()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,0);
+  digitalWrite(d,1);
+  digitalWrite(e,1);
+  digitalWrite(f,0);
+  digitalWrite(g,1);
+  
+}
+void tres()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,1);
+  digitalWrite(e,0);
+  digitalWrite(f,0);
+  digitalWrite(g,1);
+  
+}
+
+void quatro()
+{
+  digitalWrite(a,0);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,0);
+  digitalWrite(e,0);
+  digitalWrite(f,1);
+  digitalWrite(g,1);
+  
+}
+
+void cinco()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,0);
+  digitalWrite(c,1);
+  digitalWrite(d,1);
+  digitalWrite(e,0);
+  digitalWrite(f,1);
+  digitalWrite(g,1);
+  
+}
+
+void seis()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,0);
+  digitalWrite(c,1);
+  digitalWrite(d,1);
+  digitalWrite(e,1);
+  digitalWrite(f,1);
+  digitalWrite(g,1);
+  
+}
+void sete()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,0);
+  digitalWrite(e,0);
+  digitalWrite(f,0);
+  digitalWrite(g,0);
+  
+}
+void oito()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,1);
+  digitalWrite(e,1);
+  digitalWrite(f,1);
+  digitalWrite(g,1);
+  
+}
+void nove()
+{
+  digitalWrite(a,1);
+  digitalWrite(b,1);
+  digitalWrite(c,1);
+  digitalWrite(d,0);
+  digitalWrite(e,0);
+  digitalWrite(f,1);
+  digitalWrite(g,1);
+  
+}
+
+void setup() {
+  
+  pinMode (a, OUTPUT);
+  pinMode (b, OUTPUT);
+  pinMode (c, OUTPUT);
+  pinMode (d, OUTPUT);
+  pinMode (e, OUTPUT);
+  pinMode (f, OUTPUT);
+  pinMode (g, OUTPUT);
+  pinMode (terraDez, OUTPUT);
+  pinMode (terraUni, OUTPUT);
+ 
+}
+
+void loop() {
+ 
+ 
+ /*zero();
+ delay (1000);
+
+ um();
+ delay (1000);
+ 
+ dois();
+ delay (1000);
+ 
+ tres();
+ delay (1000);
+ 
+ quatro();
+ delay (1000);
+
+ cinco();
+ delay (1000);
+ 
+ seis();
+ delay (1000);
+ 
+ sete();
+ delay (1000);
+ 
+ oito();
+ delay (1000);
+ 
+ nove();
+ delay (1000);*/
+ 
+ 
+ /*digitalWrite (terraDez, HIGH);
+ digitalWrite (terraUni,LOW);
+ dois();
+ delay(5);
+ digitalWrite (terraDez,LOW);
+ digitalWrite (terraUni,HIGH);*/
+
+for( int contadorDez=0; contadorDez <=9; contadorDez++)
+{
+  for( int contadorUni=0; contadorUni<=9; contadorUni++)
+  {
+    x=millis();
+    while(millis()-x<1000)
+    {
+       digitalWrite (terraDez, LOW);
+       digitalWrite (terraUni,HIGH);
+      if(contadorDez==0)
+      {
+        zero();
+      }
+      else if(contadorDez==1)
+      {
+        um();
+      }
+       else if(contadorDez==2)
+      {
+        dois();
+      }
+       else if(contadorDez==3)
+      {
+        tres();
+      }
+       else if(contadorDez==4)
+      {
+        quatro();
+      }
+       else if(contadorDez==5)
+      {
+        cinco();
+      }
+       else if(contadorDez==6)
+      {
+        seis();
+      }
+      else if(contadorDez==7)
+      {
+        sete();
+      }
+       else if(contadorDez==8)
+      {
+        oito();
+      }
+       else if(contadorDez==9)
+      {
+        nove();
+      }
+       delay (1);
+      digitalWrite (terraDez, HIGH);
+      digitalWrite (terraUni,LOW);
+       if(contadorUni==0)
+      {
+        zero();
+      }
+      else if(contadorUni==1)
+      {
+        um();
+      }
+       else if(contadorUni==2)
+      {
+        dois();
+      }
+       else if(contadorUni==3)
+      {
+        tres();
+      }
+       else if(contadorUni==4)
+      {
+        quatro();
+      }
+       else if(contadorUni==5)
+      {
+        cinco();
+      }
+       else if(contadorUni==6)
+      {
+        seis();
+      }
+      else if(contadorUni==7)
+      {
+        sete();
+      }
+       else if(contadorUni==8)
+      {
+        oito();
+      }
+       else if(contadorUni==9)
+      {
+        nove();
+      }
+       delay (1);
+    }
+  }
+}
+
+
+
+ 
+ 
+}
